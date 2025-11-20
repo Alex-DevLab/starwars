@@ -19,8 +19,8 @@ const AboutMe = () => {
                     'birth_year': data.birth_year
                 })
             })
-            .catch(() => setAboutMe({Error:'Error loading data'}));
-    })
+            .catch(() => setAboutMe({}));
+    },[])
 
     if (aboutMe) {
         return (
