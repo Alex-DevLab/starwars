@@ -19,7 +19,6 @@ const AboutMe = () => {
                     'birth_year': data.birth_year
                 })
             })
-            .catch(() => setAboutMe({}));
     },[])
 
     if (aboutMe) {
@@ -35,13 +34,6 @@ const AboutMe = () => {
                 <p>Birth year: {aboutMe.birth_year}</p>
             </div>
         )
-    } else {
-        return (
-            <p className="far-galaxy">
-                <span className="spinner-border spinner-border-sm"></span>
-                <span className="spinner-grow spinner-grow-sm"></span>
-            </p>
-        );
     }
 
 }
