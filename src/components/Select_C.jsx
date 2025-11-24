@@ -7,7 +7,7 @@ const Select_C = () => {
     return (
         <select id="planet" name="planet">
             <option value="" disabled selected hidden>Select planet</option>
-            {planets.map(item => <OptionItem data={item} key={item} />)}
+            {planets.map(item => <OptionItem data={item} key={item}/>)}
         </select>
     )
 }
