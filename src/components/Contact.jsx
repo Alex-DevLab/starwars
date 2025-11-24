@@ -1,4 +1,19 @@
+import Select_C from "./Select_C.jsx";
+import {useEffect, useState} from "react";
+import {base_url, Planets} from "../utils/constants.js";
+
 const Contact = () => {
+    const [planets, setPlanets] = useState([]);
+
+    useEffect(() => {
+        fetch(`${base_url}/v1/planets`)
+            .then(res => res.json())
+            .then(data => {
+                const names = data.map(planet =>planet.name);
+                setPlanets(names);
+            })
+    }, []);
+
     return (
         <div className={'far-galaxy'}>
             <div className="container-form">
@@ -12,13 +27,10 @@ const Contact = () => {
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
                     <br/>
 
-                    <label htmlFor="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="" disabled selected hidden>Select country</option>
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
+                    <label htmlFor="planet">Planet</label>
+                    <Planets value={planets}>
+                        <Select_C/>
+                    </Planets>
 
                     <div className="subjectContainer">
                         <label htmlFor="subject">Subject</label>
