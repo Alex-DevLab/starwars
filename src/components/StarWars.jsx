@@ -2,7 +2,7 @@ import {starWarsInfo} from "../utils/constants.js";
 
 const StarWars = () => {
     return (
-        <div className={'far-galaxy'}>
+        <div className="text-info">
             {starWarsInfo}
         </div>
     )

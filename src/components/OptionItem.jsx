@@ -1,6 +1,6 @@
 const OptionItem = ({data}) => {
     return (
-        <option value={data}>{data}</option>
+        <option value={data} className="bg-grey">{data}</option>
     )
 }
 

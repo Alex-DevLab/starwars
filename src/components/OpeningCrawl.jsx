@@ -6,25 +6,29 @@ const OpeningCrawl = () => {
     const [openingCrawl, setOpeningCrawl] = useState();
 
     useEffect(() => {
-        const episode = Math.floor(Math.random()*6)+1;
+        const episode = Math.floor(Math.random() * 6) + 1;
         fetch(`${base_url}/v1/films/${episode}`)
             .then(res => res.json())
-            .then(data =>setOpeningCrawl(data.opening_crawl))
+            .then(data => setOpeningCrawl(data.opening_crawl))
             .catch(() => setOpeningCrawl('Error loading opening crawl'))
 
     }, [])
 
-    if(openingCrawl){
+    if (openingCrawl) {
 
         return (
-            <p className="far-galaxy">{openingCrawl}</p>
+            <p className="text-info">{openingCrawl}</p>
         );
-    }else{
+    } else {
         return (
-            <p className="far-galaxy">
-                <span className="spinner-border spinner-border-sm"></span>
-                <span className="spinner-grow spinner-grow-sm"></span>
+            <div className="flex justify-center">
+            <div
+                className="w-10 h-10 border-4 border-t-main border-grey rounded-full animate-spin"
+            ></div>
+            <p className="text-info px-2.5">
+                Loading...
             </p>
+            </div>
         );
     }
 
