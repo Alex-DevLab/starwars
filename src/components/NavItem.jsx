@@ -1,8 +1,8 @@
 const NavItem = ({itemTitle, changePage}) => {
     return (
-        <li
+        <div
             onClick={() => changePage(itemTitle)}
-            className="nav-item btn btn-danger mx-1 border-warning">{itemTitle}</li>
+            className="bg-red border-1 px-3 rounded-md cursor-pointer hover:bg-red-500 hover:text-white">{itemTitle}</div>
     )
 }
 

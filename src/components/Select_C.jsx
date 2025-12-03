@@ -5,7 +5,7 @@ import {Planets} from "../utils/constants.js";
 const Select_C = () => {
     const planets = useContext(Planets);
     return (
-        <select id="planet" name="planet">
+        <select id="planet" name="planet" className="input-primary">
             <option value="" disabled selected hidden>Select planet</option>
             {planets.map(item => <OptionItem data={item} key={item}/>)}
         </select>

@@ -61,15 +61,15 @@ const AboutMe = () => {
     return (
         <>
             {(!!aboutMe) &&
-                <div className={'far-galaxy'}>
-                    <p>Name: {aboutMe.name}</p>
-                    <p>Gender: {aboutMe.gender}</p>
-                    <p>Skin color: {aboutMe.skin_color}</p>
-                    <p>Hair color: {aboutMe.hair_color}</p>
-                    <p>Height: {aboutMe.height}</p>
-                    <p>Eye color: {aboutMe.eye_color}</p>
-                    <p>Weight: {aboutMe.mass}</p>
-                    <p>Birth year: {aboutMe.birth_year}</p>
+                <div className="text-info">
+                    <p><u>Name</u>: {aboutMe.name}</p>
+                    <p><u>Gender</u>: {aboutMe.gender}</p>
+                    <p><u>Skin color</u>: {aboutMe.skin_color}</p>
+                    <p><u>Hair color</u>: {aboutMe.hair_color}</p>
+                    <p><u>Height</u>: {aboutMe.height}</p>
+                    <p><u>Eye color</u>: {aboutMe.eye_color}</p>
+                    <p><u>Weight</u>: {aboutMe.mass}</p>
+                    <p><u>Birth year</u>: {aboutMe.birth_year}</p>
                 </div>
             }
         </>
